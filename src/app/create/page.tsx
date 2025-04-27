@@ -5,7 +5,7 @@ import MarkdownEdit from "@/components/MarkdownEdit";
 import { SessionProvider } from "next-auth/react"
 
 
-const create: React.FC = () => {
+const Create: React.FC = () => {
 	const [document, setDocument] = useState(null);
 	
 	const [documentId, setDocumentId] = useState(null)
@@ -26,4 +26,4 @@ const create: React.FC = () => {
 	);
 };
 
-export default create;
+export default Create;
