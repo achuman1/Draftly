@@ -86,7 +86,13 @@ const MarkdownEdit = ({ document, documentId, setDocument, isOtherParty = false 
 
   return (
     <div className="w-full h-screen font-inter">
-      <MDEditor className="w-3/4" value={content} onChange={handleChange} readOnly={isReadOnly && !isOtherParty} />
+      <div className={`w-3/4 ${isReadOnly && !isOtherParty ? "pointer-events-none" : ""}`}>
+  <MDEditor
+    value={content}
+    onChange={handleChange}
+  />
+</div>
+
 
       <div>
         {!isReadOnly && (
